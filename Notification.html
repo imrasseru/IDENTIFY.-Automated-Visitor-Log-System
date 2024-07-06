@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Monitor - Information of Visitors</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="notif.css">
+    <!-- Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body class="body">
+    <div class="overlay" id="overlay"></div>
+
+    <div class="popup-container" id="popupContainer">
+      <h2>Juan de la Cruz</h2>
+      <p>#0012345</p>
+      <button id="confirmLogout"> Log out</button>
+
+  </div>
+  <script>
+      function showLogoutPopup() {
+          const popupContainer = document.getElementById('popupContainer');
+          const overlay = document.getElementById('overlay');
+          popupContainer.style.display = 'block';
+          overlay.style.display = 'block';
+      }
+
+      // Trigger the pop-up automatically when the page loads
+      window.onload = showLogoutPopup;
+
+      const confirmLogoutButton = document.getElementById('confirmLogout');
+      const cancelLogoutButton = document.getElementById('cancelLogout');
+
+   // ...
+
+confirmLogoutButton.addEventListener('click', () => {
+    // Replace 'your-logout-page.html' with the URL of the page you want to redirect to
+    window.location.href = 'login.html';
+});
+
+// ...
+
+  </script>
+     <div class="container">
+        <h2>Information of Visitor</h2>
+        <form method="post">
+            <div class="column">
+                <div class="txt_field">
+                    <input type="text" placeholder="" required>
+                    <span></span>
+                    <label>NAME</label>
+                </div>
+            </div>
+            <div class="column">
+                <div class="txt_field">
+                    <input type="text" placeholder="" required>
+                    <span></span>
+                    <label>ID Number</label>
+                </div>
+            </div>
+            <div class="column">
+                <div class="txt_field">
+                    <input type="text" placeholder="" required>
+                    <span></span>
+                    <label>Address</label>
+                </div>
+            </div>
+            <div class="column">
+                <div class="txt_field">
+                    <input type="text" placeholder="" required>
+                    <span></span>
+                    <label>MM/DD/YYYY</label>
+                </div>
+            </div>
+        </form>
+
+        <div class="content">
+            <p>Note: Allowing the visitor to enter means that their information will be automatically logged in the system.</p>
+            <div class="button-container">
+                <button id="allowEntryBtn">Allow Entry</button>
+                <button id="denyEntryBtn">Deny Entry</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        const denyEntryBtn = document.getElementById('denyEntryBtn');
+
+        denyEntryBtn.addEventListener('click', () => {
+            window.location.href = 'blacklist.html'; 
+        });
+    </script>
+       
+</body>
+</html>

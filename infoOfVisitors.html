@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Monitor - Information of Visitors</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--fonts--> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<!--stylesheet-->
+        <link rel="stylesheet" href="infovis.css">
+<!--icons-->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+<body>
+  <div class="title-name">
+    <h1>Department of Engineering</h1>
+    <h3>Notifications</h3>
+    </div>
+    <!-- Overlay background -->
+  <div class="overlay" id="overlay"></div>
+
+    <div class="popup-container" id="popupContainer">
+      <h2>Juan de la Cruz</h2>
+      <p>#0012345</p>
+      <button id="confirmLogout"> Log out</button>
+
+  </div>
+  <script>
+      function showLogoutPopup() {
+          const popupContainer = document.getElementById('popupContainer');
+          const overlay = document.getElementById('overlay');
+          popupContainer.style.display = 'block';
+          overlay.style.display = 'block';
+      }
+
+      // Trigger the pop-up automatically when the page loads
+      window.onload = showLogoutPopup;
+
+      const confirmLogoutButton = document.getElementById('confirmLogout');
+      const cancelLogoutButton = document.getElementById('cancelLogout');
+
+   // ...
+
+confirmLogoutButton.addEventListener('click', () => {
+    // Replace 'your-logout-page.html' with the URL of the page you want to redirect to
+    window.location.href = 'login.html';
+});
+
+// ...
+
+  </script>
+    <!--table-->
+                <div class="center">
+                <table>
+                    <tr>
+                      <th>DATE</th>
+                      <th>PURPOSE OF VISIT</th>
+                      <th>TIME IN</th>
+                      <th>TIME OUT</th>
+                    </tr>
+                    <tr class="value">
+                      <td>——————</td>
+                      <td>——————————————————————————————</td>
+                      <td>——————</td>
+                      <td>——————</td>
+                    </tr>
+                    <tr class="value">
+                      <td>——————</td>
+                      <td>——————————————————————————————</td>
+                      <td>——————</td>
+                      <td>——————</td>
+                    </tr>
+                    <tr class="value">
+                      <td>——————</td>
+                      <td>——————————————————————————————</td>
+                      <td>——————</td>
+                      <td>——————</td>
+                    </tr class="value">
+                    <tr class="value">
+                      <td>——————</td>
+                      <td>——————————————————————————————</td>
+                      <td>——————</td>
+                      <td>——————</td>
+                    </tr>
+                    <tr class="value">
+                      <td>——————</td>
+                      <td>——————————————————————————————</td>
+                      <td>——————</td>
+                      <td>——————</td>
+                    </tr>
+                    <tr class="value">
+                      <td>——————</td>
+                      <td>——————————————————————————————</td>
+                      <td>——————</td>
+                      <td>——————</td>
+                    </tr>
+                    <tr class="value">
+                    <td>——————</td>
+                    <td>——————————————————————————————</td>
+                    <td>——————</td>
+                    <td>——————</td>
+                  </tr>
+                  <tr class="value">
+                    <td>——————</td>
+                    <td>——————————————————————————————</td>
+                    <td>——————</td>
+                    <td>——————</td>
+                  </tr>
+                  <tr class="value">
+                    <td>——————</td>
+                    <td>——————————————————————————————</td>
+                    <td>——————</td>
+                    <td>——————</td>
+                  </tr>
+                  <tr class="value">
+                    <td>——————</td>
+                    <td>——————————————————————————————</td>
+                    <td>——————</td>
+                    <td>——————</td>
+                  </tr>
+                  </table>
+        </div> 
+            <div class="sidebar">
+                <nav>
+                <div class="logo">
+                    <i class="bx bx-menu menu-icon" ></i>
+                    <span class="logo-name">IDENTIFY</span>
+                </div>
+                
+                <div class="sidebar">
+    
+                    <div class="logo">
+                        <i class="bx bx-menu menu-icon" ></i>
+                        <span class="logo-name">IDENTIFY</span>
+                    </div>
+                    
+                    <div class="sidebar-content">
+                        <ul class="lists">
+                            <li class="list">
+                                <a href="monitor-info-main.html" class="nav-link">
+                                    <i class="bx bxs-circle icon" ></i>
+                                    <span class="link">Information of Visitors</span>
+                                </a>
+                            <li class="list">
+                                <a href="monitor-info-flagged.html" class="nav-link">
+                                    <i class="bx bxs-circle icon" ></i>
+                                   <span class="link">Flagged Visitors</span></span>
+                                </a>
+                            </li>
+                            <li class="list">
+                                <span class="nav-link">
+                                    <span class="link">Juanita de la Cruz</span> 
+                                    <a href="monitor-info-flagged.html" class="close"><i class='bx bx-x'></i></a>
+                                </span>
+                          </li>
+                            <li class="list">
+                                <a href="monitor-info-analysis.html" class="nav-link">
+                                    <i class="bx bxs-circle icon" ></i>
+                                    <span class="link">Report Analytics</span></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                </nav>  
+          <!--side bar js-->   
+          <section class="overlay"></section>
+          <script>
+              const navBar = document.querySelector("nav"),
+              menuBtns = document.querySelectorAll(".menu-icon"),
+              overlay = document.querySelector(".overlay");
+              
+              menuBtns.forEach(menuBtns =>{
+              menuBtns.addEventListener("click",()=>{
+                  navBar.classList.toggle("open");
+              });
+              });
+          
+              overlay.addEventListener("click",()=>{
+                  navBar.classList.remove("open")
+              })
+          </script>
+    </body>
+    </html>
+</body>
+</html>

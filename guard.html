@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Identify</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="g.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Information of Visitor</h2>
+        <form method="post">
+            <a href="Notification.html">
+                <i class='bx bx-log-out'></i> 
+              </a>
+
+            <div class="column">
+                <div class="txt_field">
+                    <input type="text" placeholder="" required>
+                    <span></span>
+                    <label>NAME</label>
+                </div>
+            </div>
+            <div class="column">
+                <div class="txt_field">
+                    <input type="text" placeholder="" required>
+                    <span></span>
+                    <label>ID Number</label>
+                </div>
+            </div>
+            <div class="column">
+                <div class="txt_field">
+                    <input type="text" placeholder="" required>
+                    <span></span>
+                    <label>Address</label>
+                </div>
+            </div>
+            <div class="column">
+                <div class="txt_field">
+                    <input type="text" placeholder="" required>
+                    <span></span>
+                    <label>MM/DD/YYYY</label>
+                </div>
+            </div>
+        </form>
+
+        <div class="content">
+            <p>Note: Allowing the visitor to enter means that their information will be automatically logged in the system.</p>
+            <div class="button-container">
+                <button id="allowEntryBtn">Allow Entry</button>
+                <button id="denyEntryBtn">Deny Entry</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        const denyEntryBtn = document.getElementById('denyEntryBtn');
+        const allowEntryBtn = document.getElementById('allowEntryBtn');
+
+      allowEntryBtn.addEventListener('click', () => {
+       window.location.href = 'Purpose of visit.html'; 
+      });
+        denyEntryBtn.addEventListener('click', () => {
+            window.location.href = 'blacklist.html'; 
+        });
+    </script>
+</body>
+</html>

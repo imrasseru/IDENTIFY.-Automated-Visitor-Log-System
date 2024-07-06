@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Identify</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="load.css">
+</head>
+<body>
+  <div class="container">
+  <div class="image">
+    <img src="images/qr.png">
+</div>
+
+  <div class="loading-spinner"></div>
+
+  <ul>
+    <li> P </li>
+    <li> R </li>
+    <li> O </li>
+    <li> C </li>
+    <li> E </li>
+    <li> S </li>
+    <li> S </li>
+    <li> I </li>
+    <li> N </li>
+    <li> G </li>
+  </ul>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const loadingSpinner = document.querySelector(".loading-spinner");
+
+      // Simulate a 5-second loading time
+      setTimeout(function () {
+        loadingSpinner.style.display = "none";
+
+        // Redirect to another page (e.g., page.html)
+        window.location.href = "guard.html";
+      }, 7000); // 7000 milliseconds = 7 seconds
+    });
+  </script>
+</body>
+</html>

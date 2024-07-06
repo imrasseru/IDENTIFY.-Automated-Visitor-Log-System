@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    min-height: 100%;;
+    background: #F4EEF2;
+}
+.center{
+    margin-left: 10%;
+    margin-top: 2em;
+}
+.center a{
+    text-decoration: none;
+    color: #333;
+}
+.title{
+  color: #333;
+  margin-top: 7em;
+  margin-left: 20%;
+  color: #333; 
+  font-size: 12px;
+ 
+}
+
+h1{
+    font-weight:500;
+    text-align: center;
+}
+h2{
+    font-weight:normal;
+    text-align: center;
+}
+table {
+    color: #524c4c;
+    margin-left: 30%;
+    height: 80%;
+    border-collapse: collapse;
+    width: 50%;
+  }
+
+  .value{
+    letter-spacing: -5px;
+    font-weight: 800;
+    color: #524c4c;
+  }
+  
+  
+  td, th {
+    border: 2px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+nav{
+    position:fixed;
+    top:0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+}
+nav .logo{
+    display: flex;
+    align-items: center;
+    margin: 0, 20px;
+}
+
+.logo .menu-icon{
+    color: #333;
+    font-size: 24px;
+    margin-right: 14px;
+    cursor: pointer;
+}
+
+.logo, .logo-name{
+    color: #333;
+    font-size: 22px;
+
+
+}
+
+/* flag button*/
+
+/* Style for the popup button */
+.popup-button2 {
+    background-color: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/* Style for the overlay */
+.overlay3 {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Transparent overlay */
+    z-index: 2;
+}
+
+/* Style for the message input box container */
+.message-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    z-index: 3;
+    padding: 20px;
+    max-width: 400px;
+    width: 90%;
+    margin-top: -17%;
+    margin-left: 600px;
+    
+}
+
+.message-container h1{
+    text-align: center;
+    font-size: 18px;
+}
+
+
+/* Style for the message input field */
+.message-input {
+    text-align: top;
+    vertical-align: top;
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    background:#efeded;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    outline: none;
+    border:0;
+}
+
+/* Style for the submit button */
+.submit-button {
+    background: linear-gradient(to right, #26A6B5, #081933);
+    color: #fff;
+    border: none;
+    padding: 10px 40px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+.submit-button a{
+    text-decoration: none;
+    color: #fff;
+}
+
+ /* sidebar */
+
+nav .sidebar{
+    margin-top: 20px;
+    position: fixed;
+    top:0;
+    left:-100%;
+    height:100%;
+    width:260px;
+    padding: 20px, 0;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0,  0, 0.1);
+    transition: all 0.5s ease;
+}
+nav.open .sidebar{
+left:0;
+}
+
+.sidebar .sidebar-content{
+    display: flex;
+    height: 1005;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 16px;
+}
+.sidebar-content .list{
+    list-style: none;
+}
+.list .nav-link{
+    display:flex;
+    align-items: center;
+    padding: 14px 12px;
+    border-radius: 8px; 
+    text-decoration: none;
+}
+
+.bx-x{
+    margin-left: 40px;
+}
+
+.bx-user-circle{
+    margin-left: 1330px;
+    font-size: 35px;
+    font-weight: 500;
+    color: #333;
+}
+
+.bx-chevron-down{
+    margin-left: 10px;
+    color: #333;
+}
+.close{
+    color: #333;
+    text-decoration: none;
+}
+.close:hover{
+    color: #2393A0;
+    text-decoration: none;
+}
+.nav-link:hover{
+    background-color: lightslategray;
+}
+.nav-link .icon{
+    margin-right:14px ;
+    font-size: 20px;
+    color: #333;
+}
+.nav-link .link{
+    font-size: 16px;
+    color: #333;
+    font-family: 400;
+}
+.nav-link:hover .icon,
+.nav-link:hover .link{
+    color: #F4EEF2;
+}
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 260px;
+    height: 100vh;
+    width: 100%;
+}
+
+/* filter and search */
+
+.top-button{
+    display: flex;
+    padding-top: 10px;
+}
+          /* Style for the popup button */
+          .popup-button {
+            background-color: #D9D9D9;
+            color: #333;
+            border: none;
+            padding: 10px 10px;
+            cursor: pointer;
+            margin-left: 32%;
+            padding-right: 8%;
+        }
+
+        /* Style for the overlay */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Transparent overlay */
+            z-index: 2;
+        }
+
+.search input {
+    border: none;
+    background: #D9D9D9;
+    outline: none;
+    color: #333;
+    margin-left: 135%;
+    height: 45px;
+    padding: 10px;
+
+    
+}
+
+.data{
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+
+}
+
+.analytics{
+    margin-left: 40%;
+}
+
+.circle{
+    height: 245px;
+    width: 245px;
+    padding-top: 10px;
+    margin-right: 20px;
+
+}
+
+.lista{
+    height: 200px;
+    width:164px;
+}
+
+/* successfully flagged*/
+
+.success{
+    width: 1500px;
+    height: 800px;
+}
+
+
+.message-containers {
+    display:flex;
+    position:absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    z-index: 3;
+    padding: 20px;
+    height:450px ;
+    margin-left: 86px;
+    width: 40%;
+    border-radius: 20px;
+}
+.message-container h1{
+    margin-left: 0px;
+}
+.message-containers h1{
+    margin-left: 230px;
+
+}
+.message-inputs {
+    
+    margin-top: 10%;
+    position:absolute;
+    height: 60%;
+    padding: 10px;
+    background:#efeded;
+    width: 80%;
+    border-radius: 20px;
+    outline: none;
+    border:0;
+    margin-left: 40px;
+}
+
+/* Style for the submit button */
+.submit-button {
+    background: linear-gradient(to right, #26A6B5, #081933);
+    color: #fff;
+    border: none;
+    padding: 10px 40px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+.submit-button a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.submit-buttonss {
+    background: linear-gradient(to right, #26A6B5, #081933);
+    color: #fff;
+    border: none;
+    padding: 10px 40px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    border-radius: 15px;
+    margin-top: 30px;
+    
+}
+.submit-buttonss a{
+    text-decoration: none;
+    color: #fff;
+}
+
+
+.close{
+    color: #333;
+    text-decoration: none;
+}
+.close:hover{
+    color: #2393A0;
+    text-decoration: none;
+}
+.bx-x{
+    margin-left: 40px;
+}
+
+.bx-user-circle{
+    margin-top: -50px;
+    margin-left: 1300px;
+    font-size: 35px;
+    font-weight: 500;
+    color: #333;
+}
+.bx-chevron-down i a{
+    cursor: pointer;
+}
+.bx-chevron-down i{
+    cursor: pointer;
+    margin-left: 10px;
+    color: #333;
+}
+
+.close{
+    color: #333;
+    text-decoration: none;
+}
+.close:hover{
+    color: #2393A0;
+    text-decoration: none;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dire="ltr">
+<head>
+    <title>Identify</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Attach.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="wrapper">
+        <div class="image">
+           <img src="" alt="">
+        </div>
+        <div class="content">
+            <div class="icon"><i class="fas fa cloud-upload-alt"></i></div>
+            <div class="text">No File chosen, yet!</div>
+        </div><img width="64" height="64" src="https://img.icons8.com/pastel-glyph/64/upload-to-cloud--v1.png" alt="upload-to-cloud--v1"/>
+        <div id="cancel-btn"><i class="fas fa-times"></i></div>
+        <div class="file-name" hidden>File name here</div>
+    </div>
+    <input id="default-btn" type="file" hidden>
+    <button onclick="defaultBtnActive()" id="custom-btn">Upload Image</button>
+  </div>
+  <div class="login">
+    <a href="login.html" >SAVE</a>
+  </div>
+  <script>
+    const wrapper = document.querySelector(".wrapper");
+    const fileName = document.querySelector(".file-name");
+    const defaultBtn = document.querySelector("#default-btn");
+    const customtBtn = document.querySelector("#custom-btn");
+    const img = document.querySelector("img");
+    let regExp = /[0-9a-zA-Z\^\&\'\@\{\}\[\]\,\$\=\!\-\#\(\)\.\%\+\~\_]+$/;
+    function defaultBtnActive(){
+        defaultBtn.click();
+    }
+    defaultBtn.addEventListener("change", function(){
+        const file = this.files[0];
+        if(file){
+            const reader = new FileReader();
+            reader.onload = function(){
+                const result = reader.result;
+                img.src = result;
+                wrapper.clasList.add("active");
+            }
+            reader.readAsDataURL(file);
+        }
+        if(this.value){
+            let valueStore = this.value.match(regExp);
+            fileName.txtContent = valueStore;
+        }
+    });
+  </script>
+</body>
+</html>

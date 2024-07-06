@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Identify</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="g.css">
+</head>
+<body>
+   
+    <div class="container">
+        <h2>Information of Visitor</h2>
+        <form method="post">
+                <div class="column">
+                    <div class="txt_field">
+                        <input type="text" placeholder="" required>
+                        <span></span>
+                        <label>NAME </label>
+                        
+                        
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="txt_field">
+                        <input type="text" placeholder="" required>
+                        <span></span>
+                        <label>ID Number</label>
+                    
+                    </div>
+                </div>
+        
+            
+                <div class="column">
+                    <div class="txt_field">
+                        <input type="text" placeholder="" required>
+                        <span></span>
+                        <label>Address</label>
+
+                    </div>
+                </div>
+
+                <div class="column">
+                    <div class="txt_field">
+                        <input type="text" placeholder="" required>
+                        <span></span>
+                        <label>MM/DD/YYYY</label>
+                </div>
+                </div>
+            </form>
+            <div id="myModal" class="modal">
+                <div class="Bimage">
+                    <img src="images/BLACKLISTWANTED.png">
+                </div>
+                <div class="modal-content">
+                    <p>Note: Allowing the visitor to enter means that their information will be automatically logged in the system.</p>
+                    <div class="button-container">
+                        <button id="allowEntryBtn">Allow Entry</button>
+                        <button id="denyEntryBtn">Deny Entry</button>
+                    </div>
+                </div>
+            </div>
+        
+            <div id="blurBackground" class="background-blur"></div>
+            
+            <script>
+                const modal = document.getElementById('myModal');
+                const allowEntryBtn = document.getElementById('allowEntryBtn');
+                const denyEntryBtn = document.getElementById('denyEntryBtn');
+                const blurBackground = document.getElementById('blurBackground');
+        
+                // Automatically show the modal when the page loads
+                window.addEventListener('load', () => {
+                    modal.style.display = 'block';
+                    blurBackground.style.display = 'block';
+                });
+        
+                allowEntryBtn.addEventListener('click', () => {
+                    alert('Entry allowed.');
+                    modal.style.display = 'none';
+                    blurBackground.style.display = 'none';
+                    window.location.href = 'Purpose of visit.html'; 
+                });
+        
+                denyEntryBtn.addEventListener('click', () => {
+                    alert('Entry denied.');
+                    modal.style.display = 'none';
+                    blurBackground.style.display = 'none';
+                    window.location.href = 'loading.html'; 
+                });
+            </script>

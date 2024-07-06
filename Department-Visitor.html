@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Monitor - Information of Visitors</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--fonts--> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<!--stylesheet-->
+        <link rel="stylesheet" href="VISITOR.css">
+<!--icons-->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+<body>
+    <div class="title-name">
+        <div class="overlay3" id="overlay3"></div>
+      </div>
+  
+      <div class="message-container" id="messageContainer">
+        <h1>Information Of Visitor</h1>
+        <input type="text" class="message-input" placeholder="Name">
+        <input type="text" class="message-input" placeholder="Address">
+        <input type="text" class="message-input" placeholder="Id Number">
+        <button class="submit-button" id="submitButton">Submit</button>
+      </div>
+  
+      
+      <script>
+        // Automatically pop up the message container when the page loads
+        window.addEventListener('DOMContentLoaded', function() {
+          const overlay3 = document.getElementById('overlay3');
+          const messageContainer = document.getElementById('messageContainer');
+          
+          overlay3.style.display = 'block';
+          messageContainer.style.display = 'block';
+        });
+  
+        const submitButton = document.getElementById('submitButton');
+  
+        document.addEventListener('click', function () {
+          overlay3.style.display = 'none';
+          messageContainer.style.display = 'none';
+        });
+  
+        messageContainer.addEventListener('click', function (event) {
+          event.stopPropagation();
+        });
+  
+        submitButton.addEventListener('click', function () {
+          // Redirect to another page when the "Submit" button is clicked
+          window.location.href = "Department-Main.html"; // Replace with your desired target page URL
+        });
+      </script>
+           
+
+<!--table-->
+            <div class="center">
+            <table>
+                <tr>
+                  <th>DATE</th>
+                  <th>PURPOSE OF VISIT</th>
+                  <th>TIME IN</th>
+                  <th>TIME OUT</th>
+                </tr>
+                <tr class="value">
+                  <td>——————</td>
+                  <td>——————————————————————————————</td>
+                  <td>——————</td>
+                  <td>——————</td>
+                </tr>
+                <tr class="value">
+                  <td>——————</td>
+                  <td>——————————————————————————————</td>
+                  <td>——————</td>
+                  <td>——————</td>
+                </tr>
+                <tr class="value">
+                  <td>——————</td>
+                  <td>——————————————————————————————</td>
+                  <td>——————</td>
+                  <td>——————</td>
+                </tr class="value">
+                <tr class="value">
+                  <td>——————</td>
+                  <td>——————————————————————————————</td>
+                  <td>——————</td>
+                  <td>——————</td>
+                </tr>
+                <tr class="value">
+                  <td>——————</td>
+                  <td>——————————————————————————————</td>
+                  <td>——————</td>
+                  <td>——————</td>
+                </tr>
+                <tr class="value">
+                  <td>——————</td>
+                  <td>——————————————————————————————</td>
+                  <td>——————</td>
+                  <td>——————</td>
+                </tr>
+                <tr class="value">
+                <td>——————</td>
+                <td>——————————————————————————————</td>
+                <td>——————</td>
+                <td>——————</td>
+              </tr>
+              <tr class="value">
+                <td>——————</td>
+                <td>——————————————————————————————</td>
+                <td>——————</td>
+                <td>——————</td>
+              </tr>
+              <tr class="value">
+                <td>——————</td>
+                <td>——————————————————————————————</td>
+                <td>——————</td>
+                <td>——————</td>
+              </tr>
+              <tr class="value">
+                <td>——————</td>
+                <td>——————————————————————————————</td>
+                <td>——————</td>
+                <td>——————</td>
+              </tr>
+              </table>
+    </div> 
+        <div class="sidebar">
+            <nav>
+            <div class="logo">
+
+            
+            <div class="sidebar">
+
+                <div class="logo">
+                    <i class="bx bx-menu menu-icon" ></i>
+                    <span class="logo-name">IDENTIFY</span>
+                </div>
+          
+                <div class="sidebar-content">
+                    <ul class="lists">
+                        <li class="list">
+                            <a href="monitor-info-main.html" class="nav-link">
+                                <i class="bx bxs-circle icon" ></i>
+                                <span class="link">Information of Visitors</span>
+                            </a>
+                        <li class="list">
+                            <a href="monitor-info-flagged.html" class="nav-link">
+                                <i class="bx bxs-circle icon" ></i>
+                               <span class="link">Flagged Visitors</span></span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <span class="nav-link">
+                                <span class="link">Juanita de la Cruz</span> 
+                                <a href="monitor-info-flagged.html" class="close"><i class='bx bx-x'></i></a>
+                            </span>
+                      </li>
+                        <li class="list">
+                            <a href="monitor-info-analysis.html" class="nav-link">
+                                <i class="bx bxs-circle icon" ></i>
+                                <span class="link">Report Analytics</span></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            </nav>  
+      <!--side bar js-->   
+      <section class="overlay"></section>
+      <script>
+          const navBar = document.querySelector("nav"),
+          menuBtns = document.querySelectorAll(".menu-icon"),
+          overlay = document.querySelector(".overlay");
+          
+          menuBtns.forEach(menuBtns =>{
+          menuBtns.addEventListener("click",()=>{
+              navBar.classList.toggle("open");
+          });
+          });
+      
+          overlay.addEventListener("click",()=>{
+              navBar.classList.remove("open")
+          })
+      </script>
+</body>
+</html>

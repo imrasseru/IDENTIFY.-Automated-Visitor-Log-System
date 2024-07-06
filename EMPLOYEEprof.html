@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Monitor - Information of Visitors</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--fonts--> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<!--stylesheet-->
+        <link rel="stylesheet" href="employeeprof.css">
+<!--icons-->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+<body>
+        <div class="title">
+        <h1>Customized Fields</h1>
+        <h2>Employee Profile</h2>
+            
+
+            <form>
+                <div class="item">
+                    <h3>JUAN DELLA CRUZ</h3>
+                    <h2>Security (monitor)</h2>
+                    <h2>#0012345</h2>
+
+                    <div class="center-row">
+                     
+                        <label class="checkbox-button">
+                          <input type="checkbox">
+                          <div class="custom-checkbox"></div>
+                          <div class="checkmark"></div>
+                          Info
+                        </label>
+                        <label class="checkbox-button">
+                          <input type="checkbox">
+                          <div class="custom-checkbox"></div>
+                          <div class="checkmark"></div>
+                          Monitor
+                        </label>
+                        <label class="checkbox-button">
+                            <input type="checkbox">
+                            <div class="custom-checkbox"></div>
+                            <div class="checkmark"></div>
+                            Flag
+                          </label>
+                          <label class="checkbox-button">
+                            <input type="checkbox">
+                            <div class="custom-checkbox"></div>
+                            <div class="checkmark"></div>
+                            Report
+                          </label>
+                       
+                        <label class="checkbox-button">
+                          <input type="checkbox">
+                          <div class="custom-checkbox"></div>
+                          <div class="checkmark"></div>
+                          <div class="mark"><a href="EMPLOYEEPROFOTHERS.html">Others:</a></div>
+                    <button type="submit" class="submit"><a href="#">Submit</a></button>
+            </form>
+            </div>
+        <div class="sidebar">
+            <nav>
+            <div class="logo">
+                <i class="bx bx-menu menu-icon" ></i>
+                <span class="logo-name">Customized Fields</span>
+                <div class="title-name">
+                    <div class="flag">
+                <i class='bx bx-user-circle popup-button2' id="popupButton2"></i>
+                <div class="overlay3" id="overlay3"></div>
+                <div class="message-container" id="messageContainer">
+                    <h1>JUAN DELA CRUZ<br>#0012345</h1>
+                    <button class="submit-buttonss" id="submitButtonss"><a href="EMPLOYEEprof.html">Cancel</a></button>
+                    <button class="submit-button" id="submitButton"><a href="login.html">Log Out</a></button>
+                </div>
+          
+                <i class='bx bx-chevron-down'></i>
+            </div>
+            <script>
+                const popupButton2 = document.getElementById('popupButton2');
+                const overlay3 = document.getElementById('overlay3');
+                const messageContainer = document.getElementById('messageContainer');
+                const submitButton = document.getElementById('submitButton');
+            
+                popupButton2.addEventListener('click', function(event) {
+                    overlay3.style.display = 'block';
+                    messageContainer.style.display = 'block';
+                    event.stopPropagation();
+                });
+            
+                document.addEventListener('click', function() {
+                    overlay3.style.display = 'none';
+                    messageContainer.style.display = 'none';
+                });
+            
+                messageContainer.addEventListener('click', function(event) {
+                    event.stopPropagation();
+                });
+            
+                submitButton.addEventListener('click', function() {
+                    overlay3.style.display = 'none';
+                    messageContainer.style.display = 'none';
+                });
+            </script>
+            <div class="sidebar">
+                <div class="logo">
+                    <i class="bx bx-menu menu-icon" ></i>
+                    <span class="logo-name">Customized Fields</span>
+                </div>
+                
+                <div class="sidebar-content">
+                    <ul class="lists">
+                        <li class="list">
+                            <a href="data.html" class="nav-link">
+                                <i class="bx bxs-circle icon" ></i>
+                                <span class="link">Employee Profile</span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="ADMINCus.html" class="nav-link">
+                                <i class="bx bxs-circle icon" ></i>
+                               <span class="link">Purpose of Visit</span></span>
+                            </a>
+                        </li>
+                        <li class="list">
+                            <a href="employee.html" class="nav-link">
+                                <i class="bx bxs-circle icon" ></i>
+                                <span class="link">Employee Profile</span></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            </nav>
+       
+<section class="overlay"></section>
+<script>
+    const navBar = document.querySelector("nav"),
+    menuBtns = document.querySelectorAll(".menu-icon"),
+    overlay = document.querySelector(".overlay");
+    
+    menuBtns.forEach(menuBtns =>{
+    menuBtns.addEventListener("click",()=>{
+        navBar.classList.toggle("open");
+    });
+    });
+
+    overlay.addEventListener("click",()=>{
+        navBar.classList.remove("open")
+    })
+</script>
+
+<script>
+    const popupButton = document.getElementById('popupButton');
+    const overlay2 = document.getElementById('overlay');
+ 
+    popupButton.addEventListener('click', function(event) {
+        overlay2.style.display = 'block';
+        event.stopPropagation();
+    });
+
+    document.addEventListener('click', function() {
+        overlay2.style.display = 'none';
+    });
+
+</script>
+</body>
+</html>
